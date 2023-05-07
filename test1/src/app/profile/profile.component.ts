@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
+import { User } from '../user/user-list.component';
 
 @Component({
   selector: 'te-profile',
@@ -30,24 +31,10 @@ export class ProfileComponent  implements OnInit {
       
         
   }
+  navigateToExternalLink(url: string) {
+    window.location.href = url;
+  }
   
 
 }
 
-interface User {
-  id: number;
-  firstName: string;
-  lastName: string;
-  age: number;
-  gender: string;
-  email: string;
-  phone: string;
-  username: string;
-  password: string;
-  profileImage: string;
-  education: string
-  address: string;
-  job: string;
-  socialMediaLinks: string [];
-  skills: string [];
-}

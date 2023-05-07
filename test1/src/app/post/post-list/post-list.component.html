@@ -4,7 +4,7 @@
     <div class="border border-left border-right px-3">
       <div class="p-3 border-bottom">
         <h4 class="d-flex align-items-center mb-0">
-           How are you  <i class="far fa-xs fa-star ms-auto text-primary"></i>
+           How are you 
         </h4>
       </div>
       <div>
@@ -47,13 +47,14 @@
         <div>
 
           <div class="d-flex p-3 border-bottom"  *ngFor="let post of posts">
+            <a [routerLink]="['/profile',post.userId]">
             <img [src]="post.profileImage" class="rounded-circle"
-              height="50" alt="Avatar" loading="lazy" />
+              height="50" alt="Avatar" loading="lazy" /></a>
             <div class="d-flex w-100 ps-3">
               <div>
-                <a href="">
+                <a [routerLink]="['/profile',post.userId]">
                   <h6 class="text-body">
-                    {{post.userName}}
+                    {{post.name}}
                     <span class="small text-muted font-weight-normal">{{post.userName}}</span>
                     <span class="small text-muted font-weight-normal"> • </span>
                     <span class="small text-muted font-weight-normal">2h</span>

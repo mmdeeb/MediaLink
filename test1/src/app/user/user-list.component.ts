@@ -38,7 +38,7 @@ export class UserListComponent {
   
 
 }
-interface User {
+export interface User {
   id: number;
   firstName: string;
   lastName: string;
@@ -46,7 +46,7 @@ interface User {
   gender: string;
   email: string;
   phone: string;
-  username: string;
+  userName: string;
   password: string;
   profileImage: string;
   education: string
