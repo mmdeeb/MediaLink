@@ -10,16 +10,17 @@ export class UserListComponent {
 
   users: User[] = [];
   filteredUsers: User[] = [];
+  usersUrl : string = 'api/Users/users.json'
 
   constructor(private http: HttpClient)
   {
   }
 
   ngOnInit(): void {
-    this.http.get<ApiResponse>('https://dummyjson.com/users')
+    this.http.get<User[]>(this.usersUrl)
       .subscribe(response => {
-        this.users = response.users;
-        this.filteredUsers = response.users;
+        this.users = response;
+        this.filteredUsers = response;
         console.log(this.users);
       });
   }
@@ -37,25 +38,22 @@ export class UserListComponent {
   
 
 }
-
-interface ApiResponse {
-  users: User[];
-  total: number;
-  skip: number;
-  limit: number;
-}
-
 interface User {
   id: number;
   firstName: string;
   lastName: string;
-  maidenName: string;
   age: number;
   gender: string;
   email: string;
   phone: string;
   username: string;
   password: string;
-  birthDate: string;
-  image: string;
+  profileImage: string;
+  education: string
+  address: string;
+  job: string;
+  socialMediaLinks: string [];
+  skills: string [];
 }
+
+

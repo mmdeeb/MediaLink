@@ -1,0 +1,351 @@
+[
+    {
+        "id": 1,
+        "firstName":"ahmad",
+        "lastName":"yosef",
+        "age":24,
+        "gender":"male",
+        "email":"ahmad@example.com",
+        "phone": "1234567890",
+        "userName":"ahmad123",
+        "password":"ahmad123",
+        "profileImage":"https://mdbcdn.b-cdn.net/img/Photos/Avatars/img (1).webp",
+        "education":"Bachelor's degree in Computer Science",
+        "address":"123 Main St, Anytown USA",
+        "job":"Software Engineer",
+        "socialMediaLinks":{
+        "webSite":"mywebsite.com",
+        "github":"https://github.com/ahmadyosef",
+        "twitter":"https://twitter.com/ahmadyosef",
+        "instagram":"https://www.instagram.com/ahmadyosef",
+        "facebook":"https://www.facebook.com/ahmadyosef"
+        },
+        "skills":[
+        "WebDesign",
+        "css",
+        "html",
+        "javascript",
+        "bootstrap",
+        "angular",
+        "asp.net",
+        "java",
+        "c++",
+        "csharp"
+        ]
+        },
+    {
+        "id": 2,
+        "firstName":"Samer",
+        "lastName":"Ali",
+        "age":24,
+        "gender":"male",
+        "email":"samer.ali@example.com",
+        "phone":"1234567890",
+        "userName":"s.ali123",
+        "password":"pass123",
+        "profileImage":"https://mdbcdn.b-cdn.net/img/Photos/Avatars/img (11).webp",
+        "education":"Bachelor's degree in Computer Engineering",
+        "address":"456 Main St, Anytown USA",
+        "job":"Software Developer",
+        "socialMediaLinks":{
+            "webSite":"mywebsite.com",
+            "github":"https://github.com/s.ali123",
+            "twitter":"https://twitter.com/s.ali123",
+            "instagram":"https://www.instagram.com/s.ali123",
+            "facebook":"https://www.facebook.com/s.ali123"
+        },
+        "skills":[
+            "WebDesign",
+            "css",
+            "html",
+            "javascript",
+            "bootstrap",
+            "angular",
+            "asp.net",
+            "java",
+            "c++",
+            "csharp"
+        ]
+    },
+    {
+        "id": 3,
+        "firstName": "John",
+        "lastName": "Doe",
+        "age": 25,
+        "gender": "Male",
+        "email": "john.doe@example.com",
+        "phone": "1234567890",
+        "userName": "johndoe",
+        "password": "johndoe123",
+        "profileImage": "https://mdbcdn.b-cdn.net/img/Photos/Avatars/img (2).webp",
+        "education": "Bachelor's Degree in Computer Science",
+        "address": "123 Main St, Anytown, USA",
+        "job": "Web Developer",
+        "socialMediaLinks":{
+            "webSite":"mywebsite.com",
+            "github":"https://github.com/johndoe",
+            "twitter":"https://twitter.com/johndoe",
+            "instgram":"https://www.instagram.com/johndoe/",
+            "facebook":"https://www.facebook.com/johndoe"
+        },
+        "skills":[
+            "WebDesign",
+            "CSS",
+            "HTML",
+            "JavaScript",
+            "Bootstrap",
+            "Angular",
+            "ASP.NET",
+            "Java",
+            "C++",
+            "C#"
+        ]
+    },
+    {
+        "id": 4,
+        "firstName": "Jane",
+        "lastName": "Doe",
+        "age": 28,
+        "gender": "Female",
+        "email": "jane.doe@example.com",
+        "phone": "9876543210",
+        "userName": "janedoe",
+        "password": "janedoe123",
+        "profileImage": "https://mdbcdn.b-cdn.net/img/Photos/Avatars/img (3).webp",
+        "education": "Master's Degree in Business Administration",
+        "address": "456 Main St, Anytown, USA",
+        "job": "Marketing Manager",
+        "socialMediaLinks":{
+            "webSite":"mywebsite.com",
+            "github":"https://github.com/janedoe",
+            "twitter":"https://twitter.com/janedoe",
+            "instgram":"https://www.instagram.com/janedoe/",
+            "facebook":"https://www.facebook.com/janedoe"
+        },
+        "skills":[
+            "Marketing",
+            "Social Media",
+            "Content Creation",
+            "Project Management",
+            "Market Research",
+            "Copywriting",
+            "SEO",
+            "Google Analytics",
+            "Adobe Photoshop",
+            "Microsoft Office"
+        ]
+    },
+    {
+        "id": 5,
+        "firstName": "khaled",
+        "lastName": "Ali",
+        "age": 25,
+        "gender": "male",
+        "email": "khaled.ali@example.com",
+        "phone":"123456789",
+        "userName": "khaled.ali",
+        "password": "mypassword123",
+        "profileImage": "https://mdbcdn.b-cdn.net/img/Photos/Avatars/img (5).webp",
+        "education": "Bachelor's degree in Computer Science",
+        "address": {
+            "street": "123 Main Street",
+            "city": "New York",
+            "state": "NY",
+            "zip": "10001"
+        },
+        "job": "Software Engineer",
+        "socialMediaLinks": {
+            "webSite": "mywebsite.com",
+            "github": "https://github.com/khaledali",
+            "twitter": "https://twitter.com/khaled_ali",
+            "instagram": "https://www.instagram.com/khaled.ali",
+            "facebook": "https://www.facebook.com/khaled.ali"
+        },
+        "skills": [
+            "Web Design",
+            "CSS",
+            "HTML",
+            "JavaScript",
+            "Bootstrap",
+            "Angular",
+            "ASP.NET",
+            "Java",
+            "C++",
+            "C#"
+        ]
+    },    
+    {
+        "id": 6,
+        "firstName": "Emely",
+        "lastName": "Johnson",
+        "age": 28,
+        "gender": "female",
+        "email": "emely.johnson@example.com",
+        "phone": "1234567890",
+        "userName": "emely.j",
+        "password": "password123",
+        "profileImage": "https://mdbcdn.b-cdn.net/img/Photos/Avatars/img (6).webp",
+        "education": "Bachelor's degree in Computer Science",
+        "address": "123 Main St, Anytown USA",
+        "job": "Web Developer",
+        "socialMediaLinks": {
+            "webSite": "mywebsite.com",
+            "github": "https://github.com/emely-j",
+            "twitter": "https://twitter.com/emelyj",
+            "instagram": "https://www.instagram.com/emely.j",
+            "facebook": "https://www.facebook.com/emely.johnson"
+        },
+        "skills": [
+            "WebDesign",
+            "css",
+            "html",
+            "javascript",
+            "bootstrap",
+            "angular",
+            "asp.net",
+            "java",
+            "c++",
+            "csharp"
+        ]
+    },
+    {
+        "id": 7,
+        "firstName": "Sara",
+        "lastName": "Garcia",
+        "age": 32,
+        "gender": "female",
+        "email": "sara.garcia@example.com",
+        "phone": "1234567890",
+        "userName": "sara_g",
+        "password": "pass123",
+        "profileImage": "https://mdbcdn.b-cdn.net/img/Photos/Avatars/img (7).webp",
+        "education": "Master's degree in Business Administration",
+        "address": "456 Main St, Anytown USA",
+        "job": "Marketing Manager",
+        "socialMediaLinks": {
+            "webSite": "mywebsite.com",
+            "github": "https://github.com/sara_garcia",
+            "twitter": "https://twitter.com/sara_g",
+            "instagram": "https://www.instagram.com/sara.g",
+            "facebook": "https://www.facebook.com/sara.garcia"
+        },
+        "skills": [
+            "Marketing Strategy",
+            "Social Media Marketing",
+            "Content Marketing",
+            "SEO",
+            "PPC Advertising",
+            "Email Marketing",
+            "javascript",
+            "bootstrap",
+            "angular",
+            "asp.net"
+        ]
+    },
+    {
+        "id": 8,
+        "firstName": "sondos",
+        "lastName": "Abdullah",
+        "age": 26,
+        "gender": "female",
+        "email": "sondos@example.com",
+        "phone": "5551234",
+        "userName": "sondos_abdullah",
+        "password": "mypassword123",
+        "profileImage": "https://mdbcdn.b-cdn.net/img/Photos/Avatars/img (8).webp",
+        "education": "Bachelor's degree in Computer Science",
+        "address": "123 Main St, Anytown USA",
+        "job": "Software Developer",
+        "socialMediaLinks": {
+        "webSite": "mywebsite.com",
+        "github": "https://github.com/sondosabdullah",
+        "twitter": "https://twitter.com/sondosabdullah",
+        "instagram": "https://www.instagram.com/sondosabdullah/",
+        "facebook": "https://www.facebook.com/sondosabdullah"
+        },
+        "skills": [
+        "WebDesign",
+        "css",
+        "html",
+        "javascript",
+        "bootstrap",
+        "angular",
+        "asp.net",
+        "java",
+        "c++",
+        "csharp"
+        ]
+        },
+    {
+        "id": 9,
+        "firstName": "Ibrahem",
+        "lastName": "Ali",
+        "age": 30,
+        "gender": "male",
+        "email": "ibrahem@example.com",
+        "phone": "123456789",
+        "userName": "ibrahem_ali",
+        "password": "mypassword123",
+        "profileImage": "https://mdbcdn.b-cdn.net/img/Photos/Avatars/img (9).webp",
+        "education": "Bachelor's degree in Computer Science",
+        "address": "123 Main Street, Anytown, USA",
+        "job": "Software Engineer",
+        "socialMediaLinks": {
+            "webSite": "ibrahemali.com",
+            "github": "https://github.com/ibrahem-ali",
+            "twitter": "https://twitter.com/ibrahem_ali",
+            "instagram": "https://www.instagram.com/ibrahem_ali/",
+            "facebook": "https://www.facebook.com/ibrahem.ali.123"
+        },
+        "skills": [
+            "Web Design",
+            "CSS",
+            "HTML",
+            "JavaScript",
+            "Bootstrap",
+            "Angular",
+            "ASP.NET",
+            "Java",
+            "C++",
+            "C#"
+        ]
+    },
+    {
+        "id": 10,
+        "firstName": "Sami",
+        "lastName": "Khalid",
+        "age": 25,
+        "gender": "male",
+        "email": "sami@example.com",
+        "phone": "987654321",
+        "userName": "sami_khalid",
+        "password": "mypassword456",
+        "profileImage": "https://mdbcdn.b-cdn.net/img/Photos/Avatars/img (10).webp",
+        "education": "Master's degree in Business Administration",
+        "address": "456 Elm Street, Anytown, USA",
+        "job": "Marketing Manager",
+        "socialMediaLinks": {
+            "webSite": "samikhalid.com",
+            "github": "https://github.com/sami-khalid",
+            "twitter": "https://twitter.com/sami_khalid",
+            "instagram": "https://www.instagram.com/sami_khalid/",
+            "facebook": "https://www.facebook.com/sami.khalid.123"
+        },
+        "skills": [
+            "Marketing",
+            "Social Media Management",
+            "Content Creation",
+            "SEO",
+            "Google Analytics",
+            "Web Design",
+            "CSS",
+            "HTML",
+            "Adobe Creative Suite",
+            "C++"
+        ]
+    }
+    
+
+
+]
+

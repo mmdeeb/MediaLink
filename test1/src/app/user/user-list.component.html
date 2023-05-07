@@ -16,40 +16,18 @@
     
   </div>
 <div class="container" *ngFor="let user of filteredUsers ">
-    <div class="member-entry"> 
-        <a href="#" class="member-img"> 
-            <img [src]="user.image" class="img-rounded"> 
+    <a [routerLink]="['/profile',user.id]"   > 
+    <div class="member-entry" > 
+        <a [routerLink]="['/profile',user.id]" class="member-img"  > 
+            <img [src]="user.profileImage" class="img-rounded"> 
             <i class="fa fa-forward"></i> 
         </a> 
         <div class="member-details"> 
-            <h4> <a href="#">{{user.firstName +' '+ user.lastName}}</a> </h4> 
+            <h4> <a [routerLink]="['/profile',user.id]">{{user.firstName +' '+ user.lastName}}</a> </h4> 
             <div class="row info-list"> 
-                <div class="col-sm-4"> 
-                    <i class="fa fa-birthday-cake" aria-hidden="true"></i>
-                    Birthday <a href="#">{{user.birthDate}}</a> 
-                </div> 
-                <div class="col-sm-4"> 
-                    <i class="fa fa-twitter"></i> 
-                    <a href="#">{{"  @"+user.username}}</a> 
-                </div> 
-                <div class="col-sm-4"> 
-                    <i class="fa fa-venus-mars"></i> 
-                    <a href="#">{{"  "+user.gender}}</a> 
-                </div> 
-                <div class="clear"></div> 
-                <div class="col-sm-4"> 
-                    <i class="fa fa-location"></i> 
-                    <a href="#">Prishtina</a> 
-                </div> 
-                <div class="col-sm-4"> 
-                    <i class="fa fa-envelope"></i> 
-                    <a href="#">{{"  "+user.email}}</a> 
-                </div> 
-                <div class="col-sm-4"> 
-                    <i class="fa fa-phone" aria-hidden="true"></i>
-                    <a href="#">{{"  "+user.phone}}</a> 
-                </div> 
+    
             </div> 
         </div> 
     </div>
+    </a>
 </div>
