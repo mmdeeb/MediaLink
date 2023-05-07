@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="row1">
+    <h1 id="welcome">Welcome to our site </h1>
+    <h2>Login</h2>
+  </div>
+  <form #LoginForm="ngForm" (submit)="loginUser(LoginForm)">
+    
+    <div class="row2">
+      <div class="form-group">
+        <label for="exampleInputEmail1">UserName</label>
+        <input ngModel name="UserName" required type="UserName" name="UserName" class="form-control" id="exampleInputEmail1"
+          aria-describedby="UserNameHelp" placeholder="Enter UserName" />
+        <span class="text-danger" *ngIf=" 
+        LoginForm.controls['UserName']?.invalid && 
+        LoginForm.controls['UserName']?.dirty ">
+        UserName is required
+        </span>
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input ngModel name="password" required type="password" #passwordVar="ngModel" minlength="6" name="password"
+          class="form-control" id="exampleInputPassword1" placeholder="Password" />
+        <span class="text-danger" *ngIf="
+          LoginForm.controls['password']?.invalid && 
+          LoginForm.controls['password']?.dirty
+          ">
+          required
+        </span>
+        <span class="text-danger" *ngIf="  passwordVar.errors?.['minlength']">
+          minimum light is 6 chat
+        </span>
+
+      </div>
+      
+      <div class="row3">
+        <button type="submit" class="btn btn-outline-dark">login</button>
+      </div>
+      
+      <te-login-dialog *ngIf="loginFailed"></te-login-dialog>
+    
+    </div>
+  
+  </form>
+</div>

@@ -9,6 +9,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { UserListComponent } from './user/user-list.component';
 import { FormsModule } from '@angular/forms';
 import { ProfileComponent } from './profile/profile.component';
+import { LoginComponent } from './login/login.component';
+import { LoginErrorComponent } from './login/login-dialog/login-dialog.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,10 @@ import { ProfileComponent } from './profile/profile.component';
     HomeComponent,
     PostListComponent,
     UserListComponent,
-    ProfileComponent
+    ProfileComponent,
+    LoginComponent,
+    LoginErrorComponent
+  
   ],
   imports: [
     BrowserModule,

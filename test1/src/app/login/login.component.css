@@ -1,0 +1,39 @@
+.container{
+    background-color:#ffffff;
+    color: #000000;
+    width:40%;
+    margin-top: 5%;
+    padding: 5%;
+    border-radius: 3%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+
+}
+.row1 ,.row3{
+    text-align: center;
+}
+
+input{
+    background-color: #ffffff;
+    margin-top:2% ;
+    margin-bottom:2% ;
+    
+}
+span {
+margin-bottom:20px ;
+
+}
+
+label{
+    margin-top: 20px;
+}
+
+button {
+    margin-top: 7%;
+    margin-bottom: 0%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.5rem 2rem;
+}
+label,h1{
+    font-weight: bold;
+}

@@ -50,6 +50,7 @@ export class PostListComponent implements OnInit {
     }
     return post;
   }
+  
 
 }
 
