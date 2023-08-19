@@ -1,0 +1,28 @@
+<app-dashboard></app-dashboard>
+<div class="opt">
+    <div class="buttons">
+        <button class="primary" (click)="update()">
+            Update
+        </button>
+    </div>
+    
+    start <input type="date" placeholder="Date from" [(ngModel)]="DateFrom">
+    <br>
+    <div style="margin: 10;">.</div>
+    end  <input type="date" placeholder="Date To" [(ngModel)]="DateTo">    
+</div>
+<div class="l-card">
+    <div class="l-card__text">
+        <p>
+            The number of Jobs in the system to date is {{numOfJobs}}</p>
+    </div>
+</div>
+
+<div class="chart-container">
+        <canvas id="MyChart">{{ chart }}</canvas>
+</div>
+
+<div class="chart-bar-container">
+        <canvas id="MyBarChart">{{ chartBar }}</canvas>
+</div>
+

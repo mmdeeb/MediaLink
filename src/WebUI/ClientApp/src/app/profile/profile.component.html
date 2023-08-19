@@ -1,0 +1,211 @@
+<div class="profileBody">
+	<div class="card-container" >
+		<!-- *ngIf="isAuthenticated | async" -->
+		<!-- <span class="edit" *ngIf="isOwner">Edit</span> -->
+
+		<a class="edit" [routerLink]='["/authentication/profile"]' title="Manage" style="text-decoration:none"
+			*ngIf="isOwner"> <i class="bi bi-pencil-square"></i> </a>
+		<div class="profile-picture"> <img class="round" [src]="user.profileImage" alt="user" /></div>
+
+		<h3>{{user!.firstName+ " " + user.lastName}}</h3>
+		<div class="text-muted d-block mb-2" *ngIf="user.address"><i class="bi bi-geo-alt-fill"></i>
+			{{user.address}}</div>
+		<p>{{user.specialization}}</p>
+		<div class="mt-5 text-center align-items-center">
+			<hr>
+
+			<div class="d-flex justify-content-around align-items-center mt-4 px-4">
+				<a [routerLink]="['/followers', user.id ]" class="following">
+					<div class="stats">
+						<h6 class="mb-0">Followers</h6>
+						<span>{{user.numberOfFollowers}}</span>
+
+					</div>
+				</a>
+
+				<a [routerLink]="['/followings', user.id ]" class="following" *userHasRole="'member'">
+					<div class="stats">
+						<h6 class="mb-0">Followings</h6>
+						<span>{{user.numberOfFollowings}}</span>
+
+
+					</div>
+				</a>
+
+
+				<a [routerLink]="['/my-posts', user.id ]" class="following">
+					<div class="stats">
+						<h6 class="mb-0">Posts</h6>
+						<span>{{user.numberOfPosts}}</span>
+
+					</div>
+				</a>
+
+			</div>
+
+
+
+		</div>
+		<hr>
+		<span *userHasRole="'member'">
+
+			<div class="buttons">
+				<button class="primary" (click)="openModal(template)" *ngIf="isOwner" >
+					Add Post
+				</button>
+				<a class="nav-link" [routerLink]="['/cv', user.id]" *ngIf="ifMember">
+					<button class="primary">
+						Export CV
+					</button>
+				</a>
+
+				<button class="primary" *ngIf="!isOwner && isFolloing" (click)="unFollow()">
+					Followed
+				</button>
+
+
+
+				<button class="primary" *ngIf="!isOwner && !isFolloing && !followAgree" (click)="follow()">
+					Follow
+				</button>
+
+
+
+				<!-- <span *ngIf="isFolloing"> true </span> -->
+				<div class="dropdown">
+					<button class="primary dropdown-btn" aria-haspopup="menu">
+						<span>More</span>
+						<span class="arrow"></span>
+					</button>
+					<ul class="dropdown-content" role="menu">
+
+						<li (click)="enableSkillsSection()" *ngIf="isOwner" style="--delay: 1;">Add Skills Section</li>
+						<li (click)="enableEducationsSection()" *ngIf="isOwner" style="--delay: 2;">
+							Add Education Section
+						</li>
+						<li (click)="enableExperiencesSection()" *ngIf="isOwner" style="--delay: 3;">
+							Add Experience Section
+						</li>
+						<li (click)="enableProjectsSection()" *ngIf="isOwner" style="--delay: 4;">
+							Add Projects Section
+						</li>
+						<li (click)="Report()" *ngIf="!isOwner" style="--delay: 5;">{{reportBtn}}</li>
+					</ul>
+				</div>
+			</div>
+		</span>
+
+		<span *ngIf="isOwner">
+			<div class="buttons" *userHasRole="'company'">
+				<button class="primary" (click)="openModal(template)">
+					Add Post
+				</button>
+				<button class="primary" (click)="openModal(jobtemplate)">
+					Add Job
+				</button>
+			</div>
+		</span>
+		<span *ngIf="!isOwner">
+			<button class="primary" (click)="DeleteUser()" *userHasRole="'Administrator'">{{deleteBtn}}</button>
+		</span>
+
+
+
+		<span *ngIf="isLoaded">
+			<!-- about -->
+			<app-about [content]="user.summary" *ngIf="user.summary.length > 0 ? true : false"></app-about>
+			<!-- about -->
+
+			<!-- activty start -->
+			<div class="group" *ngIf="user.numberOfPosts">
+				<h6>New Posts</h6>
+				<app-brief-posts [userId]="user.id"></app-brief-posts>
+			</div>
+
+			<!-- activty end -->
+			<!-- educations start-->
+			<div class="group" *ngIf="educations.length || isEducationsEnabled">
+				<h6 style="font-weight: bold;">Educations</h6>
+				<app-add-education (selectdEducation)="addEducation($event)" (_listFilter)="searchEducation($event)"
+					[filteredEducations]="filteredEducations" *ngIf="isOwner"></app-add-education>
+				<ul *ngFor="let education of (showAllEducations ? educations : educations.slice(0, 2))">
+					<app-education [education]="education" (educationForUpdate)="chosenEducation($event)"
+						(educationForDeleted)="deleteEducation($event)" [isOwner]="isOwner"> </app-education>
+					<hr class="separate">
+				</ul>
+				<span class="show-all" (click)="toggleEducations()">{{textEducationbutton}}</span>
+			</div>
+			<app-update-education [education]="edu" (chosenEducation)="updateEducation($event)"></app-update-education>
+			<!-- educations end-->
+			<!-- experience start -->
+			<div class="group" *ngIf="experiences.length || isExperiencesEnabled">
+				<h6>Experiences</h6>
+				<app-add-experience (selectdExperience)="addExperience($event)" (_listFilter)="searchExperience($event)"
+					[filteredExperiences]="filteredExperiences" *ngIf="isOwner"></app-add-experience>
+				<ul *ngFor="let experience of (showAllExperiences ? experiences : experiences.slice(0, 2))">
+					<app-experience [experience]="experience" (experienceForUpdate)="chosenExperience($event)"
+						(experienceForDeleted)="deleteExperience($event)" [isOwner]="isOwner"> </app-experience>
+					<hr class="separate">
+				</ul>
+				<span class="show-all" (click)="toggleExperiences()">{{textExperiencebutton}}</span>
+			</div>
+			<app-update-experience [experience]="exper"
+				(chosenExperience)="updateExperience($event)"></app-update-experience>
+			<!-- experience end -->
+
+			<!-- projects start -->
+			<div class="group" *ngIf="projects.length || isProjectsEnabled">
+				<h6>Projects</h6>
+				<!-- <app-add-experience (selectdExperience)="addExperience($event)" (_listFilter)="searchExperience($event)"
+				[filteredExperiences]="filteredExperiences" *ngIf="isOwner"></app-add-experience> -->
+				<app-add-project (selectdProject)="addProject($event)" [filteredProjects]="filteredProjects"
+					*ngIf="isOwner"></app-add-project>
+				<ul *ngFor="let project of (showAllProjects ? projects : projects.slice(0, 2))">
+					<!-- <app-experience [experience]="experience" (experienceForUpdate)="chosenExperience($event)"
+					(experienceForDeleted)="deleteExperience($event)" [isOwner]="isOwner"> </app-experience> -->
+
+					<app-project [project]="project" (projectForUpdate)="chosenProject($event)"
+						(projectForDeleted)="deleteProject($event)" [isOwner]="isOwner">
+
+					</app-project>
+					<hr class="separate">
+				</ul>
+				<span class="show-all" (click)="toggleProjects()">{{textProjectsbutton}}</span>
+			</div>
+			<!-- <app-update-experience [experience]="exper"
+			(chosenExperience)="updateExperience($event)"></app-update-experience> -->
+			<app-update-project [project]="pro" (chosenProject)="updateProject($event)"></app-update-project>
+			<!-- projects end -->
+
+			<!-- skills start-->
+			<div class="group" *ngIf="skills.length || isSkillsEnabled">
+				<h6>Skills</h6>
+				<app-add-skill (selectedSKill)="addSkill($event)" (_listFilter)="searchSkills($event)"
+					[filteredSKills]="filteredSKills" *ngIf="isOwner"></app-add-skill>
+				<ul *ngFor="let skill of (showAllSkills ? skills : skills.slice(0, 2))">
+					<app-skill [skill]="skill" (skillForDeleted)="deleteSkill($event)" [isOwner]="isOwner"></app-skill>
+					<hr class="separate">
+				</ul>
+				<span class="show-all" (click)="toggleSkills()">{{textskillbutton}}</span>
+			</div>
+			<!-- skills end -->
+
+			<!-- jobs start -->
+			<app-jobs-list [userId]="user.id" [isOwner]="isOwner"></app-jobs-list>
+			<!-- jobs end -->
+		</span>
+
+
+		<ng-template #template>
+			<div class="modal-body">
+				<app-write-post [user]="user" (postSucceeded)="closeModal()"></app-write-post>
+			</div>
+		</ng-template>
+
+		<ng-template #jobtemplate>
+			<div class="modal-body">
+				<app-write-job [user]="user" (jobSucceeded)="closeModal()"></app-write-job>
+			</div>
+		</ng-template>
+	</div>
+</div>

@@ -1,0 +1,122 @@
+
+a{
+    text-decoration: none;
+    color: #545454;
+
+   
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+  
+}
+
+
+
+body {
+    font-family: Montserrat, sans-serif;
+    font-weight: 300;
+
+}
+
+.container {
+    margin-top: 1rem;
+    height: inherit;
+       
+}
+
+.card {
+    width: 300px;
+    border: none;
+    border-radius: 15px;
+    padding: 8px;
+    background-color: #fff;
+    position: relative;
+    height: inherit;
+    box-shadow: 0 2px 8px rgba(156, 156, 156, 0.4);
+}
+
+.upper {
+
+    height: 100px;
+
+}
+
+.upper img {
+
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+
+.user {
+    position: relative;
+    text-align: center;
+}
+
+.profile img {
+
+
+    height: 80px;
+    width: 80px;
+    margin-top: 2px;
+
+
+}
+
+
+.profile {
+
+    position: absolute;
+    top: -50px;
+    left: 34%;
+    height: 90px;
+    width: 90px;
+    border: 3px solid #fff;
+
+    border-radius: 50%;
+
+}
+
+.follow {
+
+    border-radius: 15px;
+    padding-left:0;
+    padding-right: 0;
+    height: 35px;
+    
+}
+
+.stats span {
+    margin: 10px;
+    font-size: 16px;
+}
+
+
+
+.cover {
+    background-color: #00ADB5;
+    width: 100%;
+    height: inherit;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+
+.imagProfile{
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 12px 8px 12px 2px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.icon{
+
+    font-size: 50px;
+    margin: 10px;
+}
+
+

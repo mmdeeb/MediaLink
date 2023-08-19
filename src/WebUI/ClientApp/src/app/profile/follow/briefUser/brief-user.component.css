@@ -1,0 +1,84 @@
+.reactions ul {
+  list-style-type: none;
+  padding: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: #222831;
+}
+
+
+.reactions ul li {
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 7px 1px 7px;
+  padding: 2px;
+  
+}
+
+.separateLike {
+  border: 1px solid #222831;
+}
+
+.round-like {
+  border-radius: 50%;
+  padding: 2px;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin: 12px 8px 12px 2px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.postContainer {
+  width: 600px;
+  text-align: center;
+  margin: 1rem;
+  padding: 0;
+
+  box-shadow: 0 2px 8px rgba(156, 156, 156, 0.4);
+
+}
+.textbox {
+  margin: 0px 12px 12px 24px;
+  width: 600px;
+  display: flex;
+  display: flex; 
+  justify-content:space-between;
+
+}
+.text-body {
+  text-align: left;
+  margin-top: 18px;
+
+
+}
+
+button {
+ 
+  display: block;
+  color: #ffffff;
+  background-color: #222831;
+  border-radius: 5px;
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+  margin: 15px 10px 7px 0;
+}
+
+button.active {
+  background-color: #00ADB5;
+  color: #ffffff;
+}
+
+button.active .follow::before {
+  content: 'Remove';
+}
+
+button.active .Cancel {
+  display: none;
+}
+

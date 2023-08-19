@@ -1,0 +1,56 @@
+.skill ul {
+  list-style-type: none;
+  padding: 0px;
+  
+}
+
+  .skill ul li {
+    border: 1px solid #222831;
+    border-radius: 2px;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0 7px 7px 0;
+    padding: 7px;
+  }
+
+button {
+  display: block;
+  background-color: #222831;
+  border: 1px solid #222831;
+  border-radius: 2px;
+  color: #ffffff;
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  padding: 6px;
+  margin: 0 7px 7px 0;
+}
+
+  button.active {
+    border: 1px solid #00acb5;
+    background-color: #00acb5;
+    color: #ffffff;
+  }
+
+    button.active .unEndorsed {
+      display: none;
+    }
+
+    button.active .endorsed::after {
+      content: 'd';
+    }
+
+.delete {
+  color: #222831;
+  background-color: #00acb500;
+  border-radius: 3px;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 3px 7px;
+  display: inline;
+  position: absolute;
+  right: 16px;
+}
+
+  .delete:hover {
+    color: #00acb5;
+  }

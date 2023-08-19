@@ -1,0 +1,27 @@
+<div class="reactions card postContainer">
+  <div class="card-body" style="padding: 12px 0 4px 0;">
+  <ul class="textbox"> <span style="display: flex;">
+    <span>
+      <a href="" [routerLink]="['/profile', user.userName]"> <img [src]="user.profileImage"
+          class="round-like"  alt="user" style="margin-right: 5px;"></a>
+    </span>
+    <li [routerLinkActive]="['link-active']">
+      <h6 class="text-body">
+      <a [routerLink]="['/profile', user.userName ]">
+        <span  class="big"> {{user.firstName+ " " + user.lastName}} </span><br>
+        <span class="big text-muted font-weight-normal"
+        style="font-size: 1rem;">
+          {{user.userName}}
+        </span>
+      </a>
+    </h6>
+    </li>
+    <li style="right: 0px;position: absolute;">
+      <button [class.active]="isFollowMe" (click)="toggleBtn()" (click)="toggleState()" *ngIf="itsMe" class="btn">
+        <span [class.Cancel]="!isFollowMe" [class.follow]="isFollowMe"> User </span>
+      </button>
+    </li>
+  </span> 
+  </ul>
+</div>
+</div>

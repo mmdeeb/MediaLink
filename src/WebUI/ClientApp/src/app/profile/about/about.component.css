@@ -1,0 +1,26 @@
+.about {
+	background-color: #fff;
+    font-family: Montserrat, sans-serif;
+	text-align: left;
+	padding: 15px;
+	margin-top: 30px;
+}
+
+.show-all{
+	bottom: 8px;
+	font-family: Montserrat, sans-serif;
+	color: #222831;
+	background-color: #fff;
+	border-radius: 3px;
+	font-size: 16px;
+	padding: 3px 7px;
+	
+}
+
+.show-all:hover{
+	background-color: #00ADB5;
+}
+h6 {
+	margin: 5px 0;
+	text-transform: uppercase;
+}

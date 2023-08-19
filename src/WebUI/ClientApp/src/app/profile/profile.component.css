@@ -1,0 +1,285 @@
+
+
+* {
+  box-sizing: border-box;
+}
+a{
+text-decoration: none;
+color: #222831;
+
+}
+h3 {
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+h6 {
+  margin: 5px 0;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.card-container {
+  background-color: #fff;
+  border-radius: 2%;
+  box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
+  color: #222831;
+  padding-top: 30px;
+  position: relative;
+  width: 800px;
+  max-width: 100%;
+  text-align: center;
+  margin: 4%;
+}
+
+.card-container .edit {
+  color: #00ADB5;
+  
+  border-radius: 3px;
+  font-size: 30px;
+  padding: 3px 7px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+
+}
+/* تطبيق الانتباخ */
+.profile-picture img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.card-container .round {
+  border: 1px solid #00ADB5;
+  border-radius: 50%;
+  padding: 7px;
+  width: 200px;
+  height: 200px;
+  font-size: 16px;
+  overflow: hidden;
+  
+}
+
+button.primary {
+  background-color: #00ADB5;
+  border: 1px solid #00ADB5;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  font-family: Montserrat, sans-serif;
+  padding: 10px 25px;
+  margin: 5px 10px 5px 10px;
+
+}
+
+button.primary:active {
+  background-color: transparent;
+  color: #00ADB5;
+  margin: 5px;
+}
+
+button.primary.ghost {
+  background-color: transparent;
+  color: #00ADB5;
+  margin: 5px;
+}
+
+button.primary.ghost:active {
+  background-color: transparent;
+  background-color: #00ADB5;
+  color: #222831;
+  margin: 5px;
+}
+
+
+.follow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  color: #00ADB5;
+}
+
+.follow div {
+  margin: 5px;
+}
+
+.follow div :hover {
+  color: #00ADB5;
+}
+
+
+.group {
+  background-color: white;
+  text-align: left;
+  padding: 15px;
+  margin-top: 30px;
+  position: relative
+}
+.group ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.group ul li {
+  border: 1px solid #222831;
+  border-radius: 2px;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0 7px 7px 0;
+  padding: 7px;
+  color: white;
+}
+
+.separate {
+  border: 1px solid #00ADB5;
+}
+
+.show-all {
+  bottom: 8px;
+  font-family: Montserrat, sans-serif;
+  color:white;
+  background-color: #00ADB5;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 3px 7px;
+}
+
+.show-all:hover {
+  background-color: #00ADB5;
+}
+
+.add-skill {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  color: #222831;
+}
+
+.about {
+  background-color: white;
+  text-align: left;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:center;
+}
+
+.dropdown {
+  max-width: 8em;
+  margin: 0;
+  position: relative;
+  width: 100%;
+  z-index: 2;
+  /* Set a high z-index value to ensure it floats above other items */
+}
+
+.dropdown-btn {
+  width: 100%;
+  border: none;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 0.7em 0.5em; */
+  /* border-radius: 0.5em; */
+  /* cursor: pointer; */
+}
+
+.arrow {
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid #fff;
+  transition: transform ease-in-out 0.3s;
+}
+
+.dropdown-content {
+  list-style: none;
+  position: absolute;
+  top: 3.2em;
+  /* width: 100%; */
+  visibility: hidden;
+  overflow: hidden;
+  z-index: 9999;
+  /* Set a high z-index value to ensure it floats above other items */
+}
+
+.dropdown-content li {
+  background: #00ADB5;
+  border-radius: 0.5em;
+  position: relative;
+  left: 100%;
+  transition: 0.5s;
+  transition-delay: calc(60ms * var(--delay));
+}
+
+.dropdown-btn:focus+.dropdown-content li {
+  left: 0;
+}
+
+.dropdown-btn:focus+.dropdown-content {
+  visibility: visible;
+}
+
+.dropdown-btn:focus>.arrow {
+  transform: rotate(180deg);
+}
+
+.dropdown-content li:hover {
+  background: #008086;
+}
+
+.dropdown-content li {
+  display: block;
+  padding: 0.7em 0.5em;
+  color: #ffffff;
+  margin: 0.1em 0;
+  text-decoration: none;
+}
+
+.reactions ul {
+  list-style-type: none;
+  padding: 0px;
+}
+
+.reactions ul li {
+  display: inline-block;
+  font-size: 12px;
+  margin: 0 7px 1px 7px;
+  padding: 2px;
+}
+
+.separateLike {
+  border: 1px solid #222831;
+}
+
+.round-like {
+  border: 1px solid #00ADB5;
+  border-radius: 50%;
+  padding: 2px;
+  width: 60px;
+  height: 60px;
+}
+
+.modal-body {
+  padding: 0;
+}
+
+.following{
+  width: 150px;
+  justify-content: center;
+}

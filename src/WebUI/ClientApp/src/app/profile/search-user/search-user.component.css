@@ -1,0 +1,148 @@
+.search-box {
+    position: relative;
+}
+a{
+ margin: 0;
+ padding: 0;
+    text-decoration: none;
+    color: #222831;
+
+}
+
+.add-skill {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    color: #EEEEEE;
+}
+
+input {
+    background-color: whitesmoke;
+	border-radius: 30px;
+    border-style: none;
+	color: #231E39;
+	font-family: Montserrat, sans-serif;
+	font-weight: 500;
+	padding: 10px 10px;
+    margin: 2px;
+    width: 200px;
+    height: 40px;
+}
+
+.search-result {
+    position: fixed;
+    font-family: Montserrat, sans-serif;
+    font-weight: bold;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 99999;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 100ms ease-in;
+    pointer-events: none;
+}
+
+.search-result>div {
+    float: 100;
+    color: #222831;
+    width: 400px;
+    position: relative;
+    margin: 4% 10% 5% 25%;
+    padding: 5px 20px 13px 20px;
+    border-radius: 10px;
+    background: linear-gradient(whitesmoke, #FFFFFF);
+}
+
+.closeAS {
+    background: #222831;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: -10px;
+    width: 24px;
+    text-decoration: none;
+    border-radius: 12px;
+    border-radius: 12px;
+    box-shadow: 1px 1px 3px #222222bd;
+}
+
+.closeAS:hover {
+    background: #00ADB5;
+}
+
+.existing-skill {
+    border: 1px solid #222831;
+    border-radius: 10rem;
+    font-size: 12px;
+    margin: 0 7px 7px 0;
+    padding: 10px;
+    width: 15rem;
+    height: 2rem;
+}
+
+.save {
+    display: block;
+    background-color: #00ADB5;
+    border: 1px solid #222831;
+    border-radius: 10px;
+    color: #222831;
+    font-family: Montserrat, sans-serif;
+    font-weight: bold;
+    padding: 5px 25px;
+    margin: 2px;
+}
+
+.save:hover {
+    box-shadow: 0px 10px 5px #222831b6;
+}
+
+
+.reactions ul {
+	list-style-type: none;
+	padding: 0px;
+}
+
+.reactions ul li {
+	display: inline-block;
+	font-size: 16px;
+	margin: 0 7px 1px 7px;
+	padding: 2px;
+}
+.separateLike {
+	border: 1px solid #222831;
+}
+
+.round-like {
+	border: 1px solid #00ADB5;
+	border-radius: 50%;
+	padding: 2px;
+    width: 60px;
+    height: 60px;
+}
+
+
+
+
+.userImg {
+    justify-content: left;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 12px 8px 12px 2px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  }
+
+
+  .text-body {
+    text-align: left;
+    margin-top: 18px;
+  
+  
+  }

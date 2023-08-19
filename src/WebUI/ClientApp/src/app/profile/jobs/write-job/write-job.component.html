@@ -1,0 +1,29 @@
+
+
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <div class="card">
+            <div class="row px-3">
+             
+                <div class="text-center" >
+                    <span>
+                        <img  class="profile-pic mr-3" [src]="user.profileImage" alt="user" />
+                    </span>
+                    
+                    <span>
+                    <h3 class="mb-0 font-weight-normal" style="color: #222831;">{{user.firstName+ " "+ user.lastName}}</h3>
+                    </span>
+                </div>
+            </div>
+            <div class="row px-3 form-group">
+                <input class="text-muted bg-light mt-4 mb-3" placeholder="Title"[(ngModel)]="title"/>
+            </div>
+            <div class="row px-3 form-group">
+                <textarea class="text-muted bg-light mt-4 mb-3" placeholder="Type the description of the job you want to advertise in your account."[(ngModel)]="description" minlength="10"></textarea>
+            </div>
+            <div class="options-container">
+                <div class="btn btn-success ml-auto" (click)="CreatePost()">{{btnText}}</div>
+            </div>
+        </div>
+    </div>
+</div> 
